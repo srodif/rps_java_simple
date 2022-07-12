@@ -9,16 +9,7 @@ public class RandMoveConvert {
   public RandMoveConvert() {
     
   }
-  /*
-    public RandMoveConvert(
-    Double rockyNum,
-    Double paperNum)
-  {
-    //this.convertedRandMove = convertedRandMove;
-    this.rockyNum = (rockyNum!=null ? rockyNum : 0.33);
-    this.paperNum = (paperNum!=null ? paperNum : 0.66);
-  }
-  */
+  
   
   //converterMethod
   public void moveConvert(Double rand) {
