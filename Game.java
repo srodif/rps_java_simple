@@ -11,7 +11,7 @@ public class Game {
 	public void moveComparison(
 				String playerMove,
 				String opponentMove) 
-  {
+  	{
 		System.out.println("Selection: " + playerMove + ". Good luck!");
 		switch (playerMove) {
 		case "rock":
