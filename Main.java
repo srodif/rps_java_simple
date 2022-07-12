@@ -6,14 +6,14 @@ public class Main {
     System.out.println("Hello world!");
 
     //name player
-		Scanner userInput = new Scanner(System.in);
-		System.out.print("Please enter your desired name: ");
-		Player myPlayer = new Player(userInput.next());
-		System.out.println("Welcome " + myPlayer.getPlayerName() + "!");
+    Scanner userInput = new Scanner(System.in);
+    System.out.print("Please enter your desired name: ");
+    Player myPlayer = new Player(userInput.next());
+    System.out.println("Welcome " + myPlayer.getPlayerName() + "!");
 
 
     
-		// choose opponent
+    // choose opponent
     System.out.println("Time to select your opponent!");
     System.out.println("Choose between normal, Rocky, Paperarm or Scyther !");
     System.out.println("Careful spelling at names please :)");
@@ -56,13 +56,13 @@ public class Main {
     
     
     
-		//choose player move
-		System.out.println("Please enter your move below.");
-		System.out.println("Remember! Your move has to be either rock, paper or scissors.");
-		System.out.println("Careful spelling please :)");
-		//check player move
-		boolean validMove;
-		String chosenMove;
+    //choose player move
+    System.out.println("Please enter your move below.");
+    System.out.println("Remember! Your move has to be either rock, paper or scissors.");
+    System.out.println("Careful spelling please :)");
+    //check player move
+    boolean validMove;
+    String chosenMove;
     do {
 			System.out.println("Move: ");
       chosenMove = userInput.next();
@@ -93,29 +93,21 @@ public class Main {
     RandMoveConvert randOppMove = new RandMoveConvert();
     randOppMove.setRockyNum(myOpponent.getRockThreshold());
     randOppMove.setPaperNum(myOpponent.getPaperThreshold());
-    
-    System.out.println("Ready to rand");
+    //System.out.println("Ready to rand");
     randOppMove.moveConvert(rand.nextDouble());
-
     myOpponent.setPlayerMove(randOppMove.getConvertedRandMove());
     System.out.println("Opponent selects: " + myOpponent.getPlayerMove() + "!");
-
-
-    /*
-    //initialize opponent
-    Player opponentPlayer = new Player("Opposition"); opponentPlayer.setPlayerMove(randOppMove.getConvertedRandMove());
-    System.out.println("Opponent selects: " + opponentPlayer.getPlayerMove() + "!");
-    */
     
-		// call game 
-		Game myGame = new Game();
-		// check
-		//System.out.println(myGame.getResult());
+	  
+    // call game 
+    Game myGame = new Game();
+    // check
+    //System.out.println(myGame.getResult());
     myGame.moveComparison(
       myPlayer.getPlayerMove(),
       myOpponent.getPlayerMove()
     );		
-		System.out.println(myGame.getResult());
-		System.out.println("Thank you for playing!");
-	}
+    System.out.println(myGame.getResult());
+    System.out.println("Thank you for playing!");
+  }
 }
