@@ -6,22 +6,19 @@ public class Player {
 	
 	//constructor 
 	public Player() {
-		/*
-    playerName = "Srod";
-		playerMove = "rock";
-    */
+		
 	}
-  public Player(String name) {
-    this.playerName = name;
-  }
+  	public Player(String name) {
+    		this.playerName = name;
+  	}
 	
 	//setters
 	public void setPlayerMove(String move) {
 		this.playerMove = move;
 	}
-  public void setPlayerName(String name) {
-    this.playerName = name;
-  }
+  	public void setPlayerName(String name) {
+    		this.playerName = name;
+  	}
 	
 	//getters 
 	public String getPlayerName() {
